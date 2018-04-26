@@ -1,8 +1,8 @@
 package se.lundsten.Repository;
 
 import org.springframework.stereotype.Component;
-import se.lundsten.model.Individual;
-import se.lundsten.model.Race;
+import model.Individual;
+import model.Race;
 
 import java.util.List;
 @Component

@@ -5,10 +5,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import se.lundsten.Repository.IndInMemoryRepo;
 import se.lundsten.Repository.IndividualsRepository;
-import se.lundsten.model.Individual;
+import model.Individual;
 
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
 public class RankController {

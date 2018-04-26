@@ -1,8 +1,6 @@
 package se.lundsten.controller;
 
-import se.lundsten.model.Race;
-
-import java.time.Duration;
+import model.Race;
 
 public class ResultController {
 
@@ -15,7 +13,7 @@ public class ResultController {
         race.setDistance(28500);
 
 
-        System.out.println("Ny ranking uträknad på "+race.getName()+" på tävling: "+race.getRaceID()+". Vertikala meter per minut var: "+race.getVerticalPerMinute()+", distans: "+race.getDistance()+" meter, höjdmeter: "+race.getVerticals()+" och tävlingens rank (0-100): "+race.getRaceRank());
+        System.out.println("Ny ranking uträknad på " +race.getName()+" på tävling: "+race.getRaceID()+". Vertikala meter per minut var: "+race.getVerticalPerMinute()+", distans: "+race.getDistance()+" meter, höjdmeter: "+race.getVerticals()+" och tävlingens rank (0-100): "+race.getRaceRank());
 
 
     return null;

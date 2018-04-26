@@ -1,6 +1,6 @@
 package se.lundsten.Repository;
 
-import se.lundsten.model.Individual;
+import model.Individual;
 
 import java.util.List;
 
