@@ -8,7 +8,7 @@ public class Individual {
   private final String lastName;
   private final int age;
   private final int points;
-  private final int rank;
+  private final IndividualRank rank;
   private final Gender gender;
 
   public UUID getId() {
@@ -31,7 +31,7 @@ public class Individual {
     return points;
   }
 
-  public int getRank() {
+  public IndividualRank getRank() {
     return rank;
   }
 
@@ -53,13 +53,14 @@ public class Individual {
     return new Builder();
   }
 
+
   public static final class Builder {
     private UUID id;
     private String firstName;
     private String lastName;
     private int age;
     private int points;
-    private int rank;
+    private IndividualRank rank;
     private Gender gender;
 
     private Builder() {
@@ -90,7 +91,7 @@ public class Individual {
       return this;
     }
 
-    public Builder withRank(int rank) {
+    public Builder withRank(IndividualRank rank) {
       this.rank = rank;
       return this;
     }

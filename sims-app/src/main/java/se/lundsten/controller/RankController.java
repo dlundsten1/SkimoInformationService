@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import se.lundsten.Repository.IndividualsRepository;
-import se.lundsten.model.CreateIndividualRequest;
 import se.lundsten.model.Individual;
+import se.lundsten.model.rest.CreateIndividualRequest;
 
 import java.util.List;
 

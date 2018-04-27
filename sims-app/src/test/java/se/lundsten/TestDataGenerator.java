@@ -14,7 +14,7 @@ public class TestDataGenerator {
       .withAge(30)
       .withFirstName("David")
       .withLastName("Lundsten")
-      .withRank(1)
+      //.withRank(1)
       .build();
 }
 

@@ -1,4 +1,4 @@
-package se.lundsten.model;
+package se.lundsten.model.rest;
 
 public class CreateIndividualRequest {
 
