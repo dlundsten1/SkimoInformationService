@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 import se.lundsten.model.Individual;
 
 import java.util.List;
+import java.util.UUID;
 
 @Component
 public class IndInMemoryRepo implements IndividualsRepository {
@@ -12,7 +13,7 @@ public class IndInMemoryRepo implements IndividualsRepository {
 
 
     @Override
-    public Individual getIndividual(long id) {
+    public Individual getIndividual(UUID id) {
         for(Individual individual : individualList){
             if(individual.getId() == id){
                 return individual;

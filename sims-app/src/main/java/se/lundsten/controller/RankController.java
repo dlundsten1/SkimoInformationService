@@ -29,8 +29,5 @@ public class RankController {
 
   @RequestMapping("/add")
   public void addOne(CreateIndividualRequest individual) {
-
-    individualsRepository.addIndividual(individual);
-    System.out.println("tillagd: "+ individualsRepository.getIndividual(0).getFirstName());
   }
 }
