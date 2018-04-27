@@ -1,10 +1,10 @@
 package se.lundsten.Repository;
 
 import org.springframework.stereotype.Component;
-import model.Individual;
-import model.Race;
+import se.lundsten.model.Individual;
 
 import java.util.List;
+
 @Component
 public class IndInMemoryRepo implements IndividualsRepository {
 

@@ -3,36 +3,34 @@ package se.lundsten.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import se.lundsten.Repository.IndInMemoryRepo;
 import se.lundsten.Repository.IndividualsRepository;
-import model.Individual;
+import se.lundsten.model.CreateIndividualRequest;
+import se.lundsten.model.Individual;
 
 import java.util.List;
 
 @RestController
 public class RankController {
-    @Autowired
-    IndividualsRepository individualsRepository;
-    IndInMemoryRepo ind;
+  @Autowired
+  IndividualsRepository individualsRepository;
 
 
-    @RequestMapping("/")
-    public List<Individual> individualList() {
+  @RequestMapping("/")
+  public List<Individual> individualList() {
 
-        return ind.getAllIndividuals();
-    }
-    @RequestMapping("/test")
-    public String test(){
+      return individualsRepository.getAllIndividuals();
+  }
 
-        return ind.toString();
-    }
-    @RequestMapping("/add")
-    public void addOne() {
-        long counter = 0;
-        Individual individual = new Individual(counter, "David","Lundsten", 1988,0,0,false);
+  @RequestMapping("/test")
+  public String test(){
 
-        ind.addIndividual(individual);
-        System.out.println("tillagd: "+ ind.getIndividual(0).getFirstName());
+      return individualsRepository.toString();
+  }
 
-    }
+  @RequestMapping("/add")
+  public void addOne(CreateIndividualRequest individual) {
+
+    individualsRepository.addIndividual(individual);
+    System.out.println("tillagd: "+ individualsRepository.getIndividual(0).getFirstName());
+  }
 }
