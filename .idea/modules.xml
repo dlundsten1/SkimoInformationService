@@ -3,10 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/sims-aggegator-pom.iml" filepath="$PROJECT_DIR$/sims-aggegator-pom.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sims-aggegator-pom.iml" filepath="$PROJECT_DIR$/sims-aggegator-pom.iml" />
       <module fileurl="file://$PROJECT_DIR$/sims-api/sims-api.iml" filepath="$PROJECT_DIR$/sims-api/sims-api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sims-api/sims-api.iml" filepath="$PROJECT_DIR$/sims-api/sims-api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sims-app/sims-app.iml" filepath="$PROJECT_DIR$/sims-app/sims-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/sims-app/sims-app.iml" filepath="$PROJECT_DIR$/sims-app/sims-app.iml" />
     </modules>
   </component>

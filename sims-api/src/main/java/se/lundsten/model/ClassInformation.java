@@ -9,4 +9,5 @@ public class ClassInformation {
   private Double distance;
   private Double verticals;
   private List<IndividualResult> competitorResultList;
+
 }
