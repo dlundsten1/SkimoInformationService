@@ -24,16 +24,14 @@ public class IndividualRestController implements IndividualRestPath {
 
   @PostMapping
   public String createIndividual(@RequestBody CreateIndividualRequest request) {
-    UUID indivudalUUID = UUID.randomUUID();
+    UUID individualId = UUID.randomUUID();
     individualsRepository.addIndividual(Individual.newBuilder()
         .withFirstName(request.getFirstName())
         .withLastName(request.getLastName())
-        .withAge(request.getAge())
         .withGender(request.getGender())
-        .withId(indivudalUUID)
-        .withPoints(request.getPoints())
-        .withRank(request.getRank()).build());
-    return indivudalUUID.toString();
+        .withId(individualId)
+        .build());
+    return individualId.toString();
   }
 
   @GetMapping(value = IndividualRestPath.FIND_BY_ID)
