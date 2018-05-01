@@ -5,7 +5,6 @@ import se.lundsten.model.Gender;
 import se.lundsten.model.IndividualRank;
 
 @JsonDeserialize(builder = CreateIndividualRequest.Builder.class)
-
 public class CreateIndividualRequest {
   private final String firstName;
   private final String lastName;
