@@ -6,10 +6,24 @@ public class Individual {
   private final UUID id;
   private final String firstName;
   private final String lastName;
-  private final int age;
+  private final Integer birthYear;
   private final int points;
   private final IndividualRank rank;
   private final Gender gender;
+
+  private Individual(Builder builder) {
+    id = builder.id;
+    firstName = builder.firstName;
+    lastName = builder.lastName;
+    birthYear = builder.birthYear;
+    points = builder.points;
+    rank = builder.rank;
+    gender = builder.gender;
+  }
+
+  public static Builder newBuilder() {
+    return new Builder();
+  }
 
   public UUID getId() {
     return id;
@@ -23,8 +37,8 @@ public class Individual {
     return lastName;
   }
 
-  public int getAge() {
-    return age;
+  public Integer getBirthYear() {
+    return birthYear;
   }
 
   public int getPoints() {
@@ -39,26 +53,12 @@ public class Individual {
     return gender;
   }
 
-  private Individual(Builder builder) {
-    id = builder.id;
-    firstName = builder.firstName;
-    lastName = builder.lastName;
-    age = builder.age;
-    points = builder.points;
-    rank = builder.rank;
-    gender = builder.gender;
-  }
-
-  public static Builder newBuilder() {
-    return new Builder();
-  }
-
 
   public static final class Builder {
     private UUID id;
     private String firstName;
     private String lastName;
-    private int age;
+    private Integer birthYear;
     private int points;
     private IndividualRank rank;
     private Gender gender;
@@ -81,8 +81,8 @@ public class Individual {
       return this;
     }
 
-    public Builder withAge(int age) {
-      this.age = age;
+    public Builder withBirthYear(Integer birthYear) {
+      this.birthYear = birthYear;
       return this;
     }
 
