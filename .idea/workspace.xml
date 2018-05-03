@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4be7aa04-b98f-4b7a-a57a-51dd90df01be" name="Default" comment="Databaskoppling">
-      <change beforePath="" afterPath="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/DbPath.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/MongoConnection.java" />
+    <list default="true" id="4be7aa04-b98f-4b7a-a57a-51dd90df01be" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/CompetitionMongoRepository2.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change beforePath="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/CompetitionMongoRepository.java" afterPath="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/CompetitionMongoRepository.java" />
-      <change beforePath="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/controller/CompetitionController.java" afterPath="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/controller/CompetitionController.java" />
+      <change beforePath="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/DbPath.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/MongoConnection.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/sims-app/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/sims-app/src/main/resources/application.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,227 +29,114 @@
     </option>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.41469994">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="CreateIndividualRequest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/rest/CreateIndividualRequest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CreateCompetitionRequest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/rest/CreateCompetitionRequest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IndividualRestPath.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/rest/IndividualRestPath.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CompetitionRestPath.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/rest/CompetitionRestPath.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Gender.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/Gender.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DbPath.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/DbPath.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Race.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/Race.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IndividualResult.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/IndividualResult.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IndividualRank.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/IndividualRank.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IndividualRestController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/controller/IndividualRestController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="544">
-                  <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="CompetitionController.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/controller/CompetitionController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="217">
-                  <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#1729#1730#0" expanded="true" />
-                    <element signature="e#1788#1789#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CompetitionRepository.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/CompetitionRepository.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CompetitionMongoRepository.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/CompetitionMongoRepository.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="23" column="49" lean-forward="false" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
-                  <folding>
-                    <element signature="e#494#495#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sims-api/pom.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sims-app/pom.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pom.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="338">
-                  <caret line="71" column="36" lean-forward="true" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MongoConnection.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/MongoConnection.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IndividualsRepository.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/IndividualsRepository.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Competition.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/Competition.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="595">
-                  <caret line="51" column="28" lean-forward="false" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-                  <folding>
-                    <element signature="e#976#977#0" expanded="true" />
-                    <element signature="e#1009#1010#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ClassInformation.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/ClassInformation.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CompetitionController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/controller/CompetitionController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1729#1730#0" expanded="true" />
+                <element signature="e#1788#1789#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Competition.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/Competition.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="51" column="28" lean-forward="false" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompetitionRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/CompetitionRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndInMemoryRepo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/IndInMemoryRepo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndividualsRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/IndividualsRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompetitionMongoRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/CompetitionMongoRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompetitionMongoRepository2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/CompetitionMongoRepository2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sims-app/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="71" column="63" lean-forward="true" selection-start-line="71" selection-start-column="63" selection-end-line="71" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndividualRestController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/controller/IndividualRestController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -286,7 +174,6 @@
         <option value="$PROJECT_DIR$/src/main/java/se/lundsten/model/Race.java" />
         <option value="$PROJECT_DIR$/sims-app/src/main/java/lundsten/Application.java" />
         <option value="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Application.java" />
-        <option value="$PROJECT_DIR$/sims-app/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/sims-api/src/main/java/model/Individual.java" />
         <option value="$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/Gender.java" />
         <option value="$PROJECT_DIR$/sims-api/src/test/java/IndividualTest.java" />
@@ -309,11 +196,15 @@
         <option value="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/controller/IndividualRestController.java" />
         <option value="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/controller/ResultController.java" />
         <option value="$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/ClassInformation.java" />
-        <option value="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/CompetitionMongoRepository.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/DbPath.java" />
         <option value="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/controller/CompetitionController.java" />
+        <option value="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/mongoDB/DbPath.java" />
+        <option value="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/mongoDB/MongoConnection.java" />
+        <option value="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/DbPath.java" />
         <option value="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/MongoConnection.java" />
+        <option value="$PROJECT_DIR$/sims-app/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/CompetitionMongoRepository.java" />
+        <option value="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/CompetitionMongoRepository2.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -455,6 +346,14 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="lundsten" type="462c0819:PsiDirectoryNode" />
               <item name="Repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SkimoInformationService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SkimoInformationService" type="462c0819:PsiDirectoryNode" />
+              <item name="sims-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -643,7 +542,28 @@
       <option name="project" value="LOCAL" />
       <updated>1525204576576</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Databaskoppling">
+      <created>1525334908172</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1525334908172</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Databaskoppling igen">
+      <created>1525335508561</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1525335508561</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Databaskoppling">
+      <created>1525336356670</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1525336356670</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -661,7 +581,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32717392" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32717392" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -669,7 +589,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7138889" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20948827" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -693,6 +613,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lagt in APIController" />
+    <MESSAGE value="Databaskoppling igen" />
     <MESSAGE value="Databaskoppling" />
     <option name="LAST_COMMIT_MESSAGE" value="Databaskoppling" />
   </component>
@@ -710,14 +631,13 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sims-app/src/test/java/se/lundsten/TestDataGenerator.java" />
     <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/Individual.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
           <folding>
-            <element signature="e#2025#2026#0" expanded="true" />
-            <element signature="e#2066#2067#0" expanded="true" />
+            <element signature="e#2025#2026#0" expanded="false" />
+            <element signature="e#2066#2067#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -756,8 +676,8 @@
         <state relative-caret-position="221">
           <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding>
-            <element signature="e#2025#2026#0" expanded="true" />
-            <element signature="e#2066#2067#0" expanded="true" />
+            <element signature="e#2025#2026#0" expanded="false" />
+            <element signature="e#2066#2067#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -800,24 +720,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/se/lundsten/controller/RankConbtro.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/se/lundsten/model/RankList.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/se/lundsten/Repository/IndividualInMemoryRepository.java" />
-    <entry file="file://$PROJECT_DIR$/sims-app/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sims-app/src/test/java/se/lundsten/TestDataGenerator.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/util/UUID.java" />
     <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/CreateIndividualRequest.java" />
     <entry file="file://$PROJECT_DIR$/sims-api/src/test/java/IndividualTest.java" />
-    <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/IndInMemoryRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/CompetitionStatus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -836,17 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/Individual.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="e#2025#2026#0" expanded="true" />
-            <element signature="e#2066#2067#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -879,18 +774,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/CompetitionResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/ClassInformation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sims-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/rest/CreateCompetitionRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/rest/CreateIndividualRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/rest/IndividualRestPath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/rest/CompetitionRestPath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -911,17 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/Competition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="51" column="28" lean-forward="false" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-          <folding>
-            <element signature="e#976#977#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/IndividualRank.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -930,10 +846,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/CompetitionRepository.java">
+    <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/MongoConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/Individual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="e#2025#2026#0" expanded="false" />
+            <element signature="e#2066#2067#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/Gender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/CompetitionResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/Competition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="51" column="28" lean-forward="false" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/controller/CompetitionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1729#1730#0" expanded="true" />
+            <element signature="e#1788#1789#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/controller/IndividualRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/DbPath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -946,68 +925,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/CompetitionMongoRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="49" lean-forward="false" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
-          <folding>
-            <element signature="e#494#495#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sims-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/controller/IndividualRestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/rest/CreateIndividualRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/rest/CreateCompetitionRequest.java">
+    <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/IndInMemoryRepo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/rest/CompetitionRestPath.java">
+    <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/CompetitionRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/Gender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/rest/IndividualRestPath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="153">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1020,41 +949,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/CompetitionMongoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sims-app/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/CompetitionMongoRepository2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="71" column="36" lean-forward="true" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+        <state relative-caret-position="332">
+          <caret line="71" column="63" lean-forward="true" selection-start-line="71" selection-start-column="63" selection-end-line="71" selection-end-column="63" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/DbPath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/Repository/MongoConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/controller/CompetitionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1729#1730#0" expanded="true" />
-            <element signature="e#1788#1789#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
