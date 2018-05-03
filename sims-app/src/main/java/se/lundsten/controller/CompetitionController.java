@@ -59,7 +59,7 @@ public class CompetitionController {
   public String setIndividualResult(String uuid, double duration){
 
       Competition competition = competitionRepository.getOneCompetition(UUID.fromString(uuid));
-
-      return individualId.toString();
+return null;
+     // return individualId.toString();
   }
 }
