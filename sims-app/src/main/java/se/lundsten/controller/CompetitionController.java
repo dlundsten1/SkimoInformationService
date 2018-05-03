@@ -10,7 +10,10 @@ import se.lundsten.model.IndividualResult;
 import se.lundsten.model.rest.CompetitionRestPath;
 import se.lundsten.model.rest.CreateCompetitionRequest;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @RestController
@@ -30,7 +33,7 @@ public class CompetitionController {
   }
 
   @RequestMapping(method = RequestMethod.POST)
-  public String createCompetition(@RequestBody CreateCompetitionRequest request) {
+  public String createCompetition(@RequestBody @Valid CreateCompetitionRequest request) {
     return competitionRepository.save((Competition.newBuilder()
         .withId(UUID.randomUUID().toString())
         .withDate(request.getDate())
@@ -45,13 +48,15 @@ public class CompetitionController {
     return competitionRepository.findAll();
   }
 
-  @RequestMapping(method = RequestMethod.PUT)
-    public Competition updateCompetition (@RequestBody CreateCompetitionRequest request, String uuid){
-      Competition competition = competitionRepository.findOne(uuid);
+  @RequestMapping(method = RequestMethod.PUT, value = "{competition-id}")
+    public String updateCompetition (@RequestBody CreateCompetitionRequest request, @NotNull @PathVariable("competition-id") String uuid){
+    return  competitionRepository.save((Competition.newBuilder()
+            .withId(uuid)
+            .withDate(request.getDate())
+            .withName(request.getName())
+            .withOrganizer(request.getOrganizer())
+            .build())).getId();
 
-     //Hur uppdaterar man detta objekt?
-
-      return competition;
   }
 
   public String setIndividualResult(String uuid, double duration){
