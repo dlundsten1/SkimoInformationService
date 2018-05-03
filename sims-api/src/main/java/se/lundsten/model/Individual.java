@@ -1,9 +1,7 @@
 package se.lundsten.model;
 
-import java.util.UUID;
-
 public class Individual {
-  private final UUID id;
+  private final String id;
   private final String firstName;
   private final String lastName;
   private final Integer birthYear;
@@ -25,7 +23,7 @@ public class Individual {
     return new Builder();
   }
 
-  public UUID getId() {
+  public String getId() {
     return id;
   }
 
@@ -55,7 +53,7 @@ public class Individual {
 
 
   public static final class Builder {
-    private UUID id;
+    private String id;
     private String firstName;
     private String lastName;
     private Integer birthYear;
@@ -66,7 +64,7 @@ public class Individual {
     private Builder() {
     }
 
-    public Builder withId(UUID id) {
+    public Builder withId(String id) {
       this.id = id;
       return this;
     }

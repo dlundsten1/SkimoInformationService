@@ -2,12 +2,19 @@ package se.lundsten.model.rest;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
+import javax.validation.constraints.Future;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @JsonDeserialize(builder = CreateCompetitionRequest.Builder.class)
 public class CreateCompetitionRequest {
+  @NotNull
   private final LocalDate date;
+
+  @NotNull
   private final String name;
+
+  @NotNull
   private final String organizer;
 
   private CreateCompetitionRequest(Builder builder) {

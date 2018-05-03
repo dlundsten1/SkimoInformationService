@@ -1,13 +1,7 @@
 package se.lundsten.Repository;
 
-
+import org.springframework.data.mongodb.repository.MongoRepository;
 import se.lundsten.model.Individual;
 
-import java.util.List;
-import java.util.UUID;
-
-public interface IndividualsRepository {
-  Individual getIndividual(UUID id);
-  void addIndividual(Individual individual);
-  List<Individual> getAllIndividuals();
+public interface IndividualsRepository extends MongoRepository<Individual, String>{
 }
