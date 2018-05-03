@@ -12,32 +12,31 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping(value = IndividualRestPath.INDIVIDUAL_PATH)
-public class IndividualRestController implements IndividualRestPath {
+public class IndividualController implements IndividualRestPath {
 
   @Autowired
   IndividualsRepository individualsRepository;
 
   @PostMapping
   public String createIndividual(@RequestBody CreateIndividualRequest request) {
-    UUID individualId = UUID.randomUUID();
-    individualsRepository.addIndividual(Individual.newBuilder()
-        .withFirstName(request.getFirstName())
-        .withLastName(request.getLastName())
-        .withGender(request.getGender())
-        .withId(individualId)
-        .build());
-    return individualId.toString();
+
+    return individualsRepository.save(Individual.newBuilder()
+            .withFirstName(request.getFirstName())
+            .withLastName(request.getLastName())
+            .withGender(request.getGender())
+            .withId(UUID.randomUUID().toString())
+            .build()).getId();
   }
 
   @GetMapping(value = IndividualRestPath.FIND_BY_ID)
   public Individual getIndividualById(@PathVariable("individual-id") String uuid) {
-    return individualsRepository.getIndividual(UUID.fromString(uuid));
+    return individualsRepository.findOne(uuid);
   }
 
   @PutMapping(value = IndividualRestPath.FIND_BY_ID)
     public Individual updateIndividualById(@PathVariable("individual-id") @RequestBody CreateIndividualRequest request, String uuid){
 
-     Individual individual = individualsRepository.getIndividual(UUID.fromString(uuid));
+     Individual individual = individualsRepository.findOne(uuid);
 
      //Hur uppdateras objektet?
       // individual.setfirstName(request.getFirstName());

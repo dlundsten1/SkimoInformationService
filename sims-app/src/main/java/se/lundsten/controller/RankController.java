@@ -18,7 +18,8 @@ public class RankController {
   @RequestMapping("/")
   public List<Individual> individualList() {
 
-      return individualsRepository.getAllIndividuals();
+     // return individualsRepository.getAllIndividuals();
+    return null;
   }
 
   @RequestMapping("/test")

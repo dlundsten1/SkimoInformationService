@@ -31,25 +31,23 @@ public class CompetitionController {
 
   @RequestMapping(method = RequestMethod.POST)
   public String createCompetition(CreateCompetitionRequest request) {
-    UUID compeitionId = UUID.randomUUID();
-    competitionRepository.createCompetition(Competition.newBuilder()
-        .withId(compeitionId)
+    return competitionRepository.save((Competition.newBuilder()
+        .withId(UUID.randomUUID().toString())
         .withDate(request.getDate())
         .withName(request.getName())
         .withOrganizer(request.getOrganizer())
-        .build());
-    return compeitionId.toString();
+        .build())).getId();
   }
 
   @RequestMapping(method = RequestMethod.GET, value = "{competition-id}")
   @ApiOperation(value ="All competitions", notes = "Tjänst för att hämta alla tävlingar.")
   public List<Competition> getCompetitions() {
-    return competitionRepository.getAllCompetitions();
+    return competitionRepository.findAll();
   }
 
   @RequestMapping(method = RequestMethod.PUT)
-    public Competition updateCompetition (CreateCompetitionRequest  request, String uuid){
-      Competition competition = competitionRepository.getOneCompetition(UUID.fromString(uuid));
+    public Competition updateCompetition (CreateCompetitionRequest request, String uuid){
+      Competition competition = competitionRepository.findOne(uuid);
 
      //Hur uppdaterar man detta objekt?
 
@@ -58,8 +56,8 @@ public class CompetitionController {
 
   public String setIndividualResult(String uuid, double duration){
 
-      Competition competition = competitionRepository.getOneCompetition(UUID.fromString(uuid));
-return null;
+      //Competition competition = competitionRepository.getOneCompetition(UUID.fromString(uuid));
+  return null;
      // return individualId.toString();
   }
 }

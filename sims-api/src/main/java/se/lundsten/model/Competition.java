@@ -2,12 +2,12 @@ package se.lundsten.model;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.UUID;
+
 import org.springframework.data.annotation.Id;
 
 public class Competition {
   @Id
-  private final UUID id;
+  private final String id;
   private final LocalDate date;
   private final String name;
   private final String organizer;
@@ -27,7 +27,7 @@ public class Competition {
     return new Builder();
   }
 
-  public UUID getId() {
+  public String getId() {
     return id;
   }
 
@@ -52,7 +52,7 @@ public class Competition {
   }
 
   public static final class Builder {
-    private UUID id;
+    private String id;
     private LocalDate date;
     private String name;
     private String organizer;
@@ -62,7 +62,7 @@ public class Competition {
     private Builder() {
     }
 
-    public Builder withId(UUID id) {
+    public Builder withId(String id) {
       this.id = id;
       return this;
     }
