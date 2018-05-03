@@ -3,8 +3,10 @@ package se.lundsten.model;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
+import org.springframework.data.annotation.Id;
 
 public class Competition {
+  @Id
   private final UUID id;
   private final LocalDate date;
   private final String name;

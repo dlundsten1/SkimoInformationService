@@ -1,6 +1,10 @@
 package se.lundsten.Repository;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import se.lundsten.model.Competition;
 
@@ -8,23 +12,27 @@ import se.lundsten.model.Competition;
 import java.util.List;
 import java.util.UUID;
 
-@Service
-public class CompetitionMongoRepository implements CompetitionRepository {
+@Component
+public abstract class CompetitionMongoRepository implements CompetitionRepository {
 
+  @Autowired
+  private List<Competition> competitions;
   @Override
-  public void createCompetition(Competition competition) {
 
+  public void createCompetition(Competition competition) {
+    competitions.save(competition);
   }
 
   @Override
   public List<Competition> getAllCompetitions() {
 
-    return null;
+    return competitions.findAll();
   }
 
   @Override
   public Competition getOneCompetition(UUID id) {
 
-    return null;
+    return competitions.;
   }
+
 }
