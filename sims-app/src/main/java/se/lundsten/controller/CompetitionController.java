@@ -30,7 +30,7 @@ public class CompetitionController {
   }
 
   @RequestMapping(method = RequestMethod.POST)
-  public String createCompetition(CreateCompetitionRequest request) {
+  public String createCompetition(@RequestBody CreateCompetitionRequest request) {
     return competitionRepository.save((Competition.newBuilder()
         .withId(UUID.randomUUID().toString())
         .withDate(request.getDate())
@@ -39,14 +39,14 @@ public class CompetitionController {
         .build())).getId();
   }
 
-  @RequestMapping(method = RequestMethod.GET, value = "{competition-id}")
+  @RequestMapping(method = RequestMethod.GET)
   @ApiOperation(value ="All competitions", notes = "Tjänst för att hämta alla tävlingar.")
   public List<Competition> getCompetitions() {
     return competitionRepository.findAll();
   }
 
   @RequestMapping(method = RequestMethod.PUT)
-    public Competition updateCompetition (CreateCompetitionRequest request, String uuid){
+    public Competition updateCompetition (@RequestBody CreateCompetitionRequest request, String uuid){
       Competition competition = competitionRepository.findOne(uuid);
 
      //Hur uppdaterar man detta objekt?
