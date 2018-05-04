@@ -3,11 +3,17 @@ package se.lundsten.model.rest;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import se.lundsten.model.Gender;
 
+import javax.validation.constraints.NotNull;
+
 @JsonDeserialize(builder = CreateIndividualRequest.Builder.class)
 public class CreateIndividualRequest {
+  @NotNull
   private final String firstName;
+  @NotNull
   private final String lastName;
+  @NotNull
   private final Integer birthYear;
+  @NotNull
   private final Gender gender;
 
   private CreateIndividualRequest(Builder builder) {

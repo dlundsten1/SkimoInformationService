@@ -19,6 +19,7 @@ import java.util.UUID;
 public class CompetitionController {
 
   @Autowired
+  private
   CompetitionRepository competitionRepository;
 
   @RequestMapping(method = RequestMethod.POST)
@@ -30,24 +31,23 @@ public class CompetitionController {
         .withOrganizer(request.getOrganizer())
         .build())).getId();
   }
-    @RequestMapping(method = RequestMethod.GET, value = "{competition-id}")
-    @ApiOperation(value ="One competition", notes = "Tjänst för att hämta en tävling.")
-    public Optional<Competition> getOneCompetition(@NotNull @PathVariable("competition-id") String id) {
 
+  @RequestMapping(method = RequestMethod.GET, value = CompetitionRestPath.FIND_BY_ID)
+  @ApiOperation(value ="One competition", notes = "Tjänst för att hämta en tävling.")
+  public Optional<Competition> getCompetitionById(@NotNull @PathVariable("competition-id") String id) {
         return competitionRepository.findById(id);
-    }
+  }
+
   @RequestMapping(method = RequestMethod.GET)
   @ApiOperation(value ="All competitions", notes = "Tjänst för att hämta alla tävlingar.")
   public List<Competition> getAllCompetitions() {
       return competitionRepository.findAll();
   }
 
-
-
-  @RequestMapping(method = RequestMethod.PUT, value = "{competition-id}")
-    public String updateCompetition (@RequestBody CreateCompetitionRequest request, @NotNull @PathVariable("competition-id") String uuid){
+  @RequestMapping(method = RequestMethod.PUT, value = CompetitionRestPath.FIND_BY_ID)
+    public String updateCompetition (@RequestBody CreateCompetitionRequest request, @NotNull @PathVariable("competition-id") String id){
     return  competitionRepository.save((Competition.newBuilder()
-            .withId(uuid)
+            .withId(id)
             .withDate(request.getDate())
             .withName(request.getName())
             .withOrganizer(request.getOrganizer())

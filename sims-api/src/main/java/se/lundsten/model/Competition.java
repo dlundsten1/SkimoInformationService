@@ -2,7 +2,7 @@ package se.lundsten.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
+
 
 import java.time.LocalDate;
 import java.util.List;
@@ -11,15 +11,15 @@ import java.util.List;
 public class Competition {
   @Id
   private String id;
-  @Field
+
   private LocalDate date;
-  @Field
+
   private String name;
-  @Field
+
   private String organizer;
-  @Field
+
   private CompetitionStatus status;
-  @Field
+
   private List<ClassInformation> classInformation;
 
   public Competition (){
@@ -39,27 +39,27 @@ public class Competition {
     return new Builder();
   }
 
-  public void setId(String id) {
+  private void setId(String id) {
     this.id = id;
   }
 
-  public void setDate(LocalDate date) {
+  private void setDate(LocalDate date) {
     this.date = date;
   }
 
-  public void setName(String name) {
+  private void setName(String name) {
     this.name = name;
   }
 
-  public void setOrganizer(String organizer) {
+  private void setOrganizer(String organizer) {
     this.organizer = organizer;
   }
 
-  public void setStatus(CompetitionStatus status) {
+  private void setStatus(CompetitionStatus status) {
     this.status = status;
   }
 
-  public void setClassInformation(List<ClassInformation> classInformation) {
+  private void setClassInformation(List<ClassInformation> classInformation) {
     this.classInformation = classInformation;
   }
 
