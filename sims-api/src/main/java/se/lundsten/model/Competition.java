@@ -4,20 +4,17 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 @Document(collection = "competition")
 public class Competition {
   @Id
   private String id;
-
   @Field
-  private LocalDateTime date;
-
+  private LocalDate date;
   @Field
   private String name;
-
   @Field
   private String organizer;
   @Field
@@ -46,7 +43,7 @@ public class Competition {
     this.id = id;
   }
 
-  public void setDate(LocalDateTime date) {
+  public void setDate(LocalDate date) {
     this.date = date;
   }
 
@@ -70,7 +67,7 @@ public class Competition {
     return id;
   }
 
-  public LocalDateTime getDate() {
+  public LocalDate getDate() {
     return date;
   }
 
@@ -93,7 +90,7 @@ public class Competition {
 
   public static final class Builder {
     private String id;
-    private LocalDateTime date;
+    private LocalDate date;
     private String name;
     private String organizer;
     private CompetitionStatus status;
@@ -107,7 +104,7 @@ public class Competition {
       return this;
     }
 
-    public Builder withDate(LocalDateTime date) {
+    public Builder withDate(LocalDate date) {
       this.date = date;
       return this;
     }

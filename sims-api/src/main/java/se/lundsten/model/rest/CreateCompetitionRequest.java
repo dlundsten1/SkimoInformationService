@@ -2,13 +2,13 @@ package se.lundsten.model.rest;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import javax.validation.constraints.NotNull;
 
 @JsonDeserialize(builder = CreateCompetitionRequest.Builder.class)
 public class CreateCompetitionRequest {
   @NotNull
-  private final LocalDateTime date;
+  private final LocalDate date;
 
   @NotNull
   private final String name;
@@ -26,7 +26,7 @@ public class CreateCompetitionRequest {
     return new Builder();
   }
 
-  public @NotNull LocalDateTime getDate() {
+  public @NotNull LocalDate getDate() {
     return date;
   }
 
@@ -40,14 +40,14 @@ public class CreateCompetitionRequest {
 
 
   public static final class Builder {
-    private @NotNull LocalDateTime date;
+    private @NotNull LocalDate date;
     private String name;
     private String organizer;
 
     private Builder() {
     }
 
-    public Builder withDate(LocalDateTime date) {
+    public Builder withDate(LocalDate date) {
       this.date = date;
       return this;
     }
