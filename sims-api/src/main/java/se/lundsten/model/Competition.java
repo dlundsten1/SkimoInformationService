@@ -1,40 +1,69 @@
 package se.lundsten.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Field;
-
+@Document(collection = "competition")
 public class Competition {
   @Id
-  @Field
-  private final String id;
+  private String id;
 
   @Field
-  private final LocalDateTime date;
+  private LocalDateTime date;
 
   @Field
-  private final String name;
+  private String name;
 
   @Field
-  private final String organizer;
+  private String organizer;
   @Field
-  private final CompetitionStatus status;
+  private CompetitionStatus status;
   @Field
-  private final List<ClassInformation> classInformation;
+  private List<ClassInformation> classInformation;
 
-    public Competition(Builder builder) {
-    id = builder.id;
-    date = builder.date;
-    name = builder.name;
-    organizer = builder.organizer;
-    status = builder.status;
-    classInformation = builder.classInformation;
+  public Competition (){
+
+  }
+  
+  private Competition(Builder builder) {
+    setId(builder.id);
+    setDate(builder.date);
+    setName(builder.name);
+    setOrganizer(builder.organizer);
+    setStatus(builder.status);
+    setClassInformation(builder.classInformation);
   }
 
-    public static Builder newBuilder() {
+  public static Builder newBuilder() {
     return new Builder();
+  }
+
+  public void setId(String id) {
+    this.id = id;
+  }
+
+  public void setDate(LocalDateTime date) {
+    this.date = date;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setOrganizer(String organizer) {
+    this.organizer = organizer;
+  }
+
+  public void setStatus(CompetitionStatus status) {
+    this.status = status;
+  }
+
+  public void setClassInformation(List<ClassInformation> classInformation) {
+    this.classInformation = classInformation;
   }
 
   public String getId() {
@@ -60,6 +89,7 @@ public class Competition {
   public List<ClassInformation> getClassInformation() {
     return classInformation;
   }
+
 
   public static final class Builder {
     private String id;

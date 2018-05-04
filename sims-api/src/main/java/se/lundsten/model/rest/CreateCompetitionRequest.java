@@ -1,23 +1,19 @@
 package se.lundsten.model.rest;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import org.springframework.data.mongodb.core.mapping.Field;
 
-import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
+import javax.validation.constraints.NotNull;
 
 @JsonDeserialize(builder = CreateCompetitionRequest.Builder.class)
 public class CreateCompetitionRequest {
   @NotNull
-  @Field
   private final LocalDateTime date;
 
   @NotNull
-  @Field
   private final String name;
 
   @NotNull
-  @Field
   private final String organizer;
 
   private CreateCompetitionRequest(Builder builder) {
