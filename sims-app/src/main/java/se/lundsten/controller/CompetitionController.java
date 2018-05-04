@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import se.lundsten.Repository.CompetitionRepository;
 import se.lundsten.model.Competition;
 import se.lundsten.model.rest.CompetitionRestPath;
+import se.lundsten.model.rest.CreateClassRequest;
 import se.lundsten.model.rest.CreateCompetitionRequest;
 
 import javax.validation.Valid;
@@ -52,6 +53,11 @@ public class CompetitionController {
             .withName(request.getName())
             .withOrganizer(request.getOrganizer())
             .build())).getId();
+  }
+  @RequestMapping(method = RequestMethod.POST, value = CompetitionRestPath.FIND_BY_ID)
+  public String addClass (@RequestBody CreateClassRequest request, @NotNull @PathVariable("competition-id") String id){
+
+  return null;
   }
 
 }
