@@ -1,20 +1,23 @@
 package se.lundsten.model.rest;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import org.springframework.data.mongodb.core.mapping.Field;
 
-import javax.validation.constraints.Future;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @JsonDeserialize(builder = CreateCompetitionRequest.Builder.class)
 public class CreateCompetitionRequest {
   @NotNull
-  private final LocalDate date;
+  @Field
+  private final LocalDateTime date;
 
   @NotNull
+  @Field
   private final String name;
 
   @NotNull
+  @Field
   private final String organizer;
 
   private CreateCompetitionRequest(Builder builder) {
@@ -27,7 +30,7 @@ public class CreateCompetitionRequest {
     return new Builder();
   }
 
-  public LocalDate getDate() {
+  public @NotNull LocalDateTime getDate() {
     return date;
   }
 
@@ -41,14 +44,14 @@ public class CreateCompetitionRequest {
 
 
   public static final class Builder {
-    private LocalDate date;
+    private @NotNull LocalDateTime date;
     private String name;
     private String organizer;
 
     private Builder() {
     }
 
-    public Builder withDate(LocalDate date) {
+    public Builder withDate(LocalDateTime date) {
       this.date = date;
       return this;
     }

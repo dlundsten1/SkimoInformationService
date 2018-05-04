@@ -1,20 +1,30 @@
 package se.lundsten.model;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 public class Competition {
   @Id
+  @Field
   private final String id;
-  private final LocalDate date;
+
+  @Field
+  private final LocalDateTime date;
+
+  @Field
   private final String name;
+
+  @Field
   private final String organizer;
+  @Field
   private final CompetitionStatus status;
+  @Field
   private final List<ClassInformation> classInformation;
 
-  private Competition(Builder builder) {
+    public Competition(Builder builder) {
     id = builder.id;
     date = builder.date;
     name = builder.name;
@@ -23,7 +33,7 @@ public class Competition {
     classInformation = builder.classInformation;
   }
 
-  public static Builder newBuilder() {
+    public static Builder newBuilder() {
     return new Builder();
   }
 
@@ -31,7 +41,7 @@ public class Competition {
     return id;
   }
 
-  public LocalDate getDate() {
+  public LocalDateTime getDate() {
     return date;
   }
 
@@ -53,7 +63,7 @@ public class Competition {
 
   public static final class Builder {
     private String id;
-    private LocalDate date;
+    private LocalDateTime date;
     private String name;
     private String organizer;
     private CompetitionStatus status;
@@ -67,7 +77,7 @@ public class Competition {
       return this;
     }
 
-    public Builder withDate(LocalDate date) {
+    public Builder withDate(LocalDateTime date) {
       this.date = date;
       return this;
     }
