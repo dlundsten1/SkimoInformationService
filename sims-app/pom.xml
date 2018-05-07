@@ -55,8 +55,8 @@
             <id>openshift</id>
             <dependencies>
                 <dependency>
-                    <artifactId>javax.servlet</artifactId>
-                    <groupId>javax.servlet-api</groupId>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>javax.servlet-api</artifactId>
                     <scope>provided</scope>
                 </dependency>
                 <dependency>
