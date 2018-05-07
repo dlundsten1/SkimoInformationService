@@ -20,7 +20,7 @@ public class Competition {
 
   private CompetitionStatus status;
 
-  private List<Class> classInformation;
+  private List<ClassInformation> classInformation;
 
   public Competition (){
 
@@ -59,7 +59,7 @@ public class Competition {
     this.status = status;
   }
 
-  public void setClassInformation(List<Class> classInformation) {
+  public void setClassInformation(List<ClassInformation> classInformation) {
     this.classInformation = classInformation;
   }
 
@@ -83,7 +83,7 @@ public class Competition {
     return status;
   }
 
-  public List<Class> getClassInformation() {
+  public List<ClassInformation> getClassInformation() {
     return classInformation;
   }
 
@@ -94,7 +94,7 @@ public class Competition {
     private String name;
     private String organizer;
     private CompetitionStatus status;
-    private List<Class> classInformation;
+    private List<ClassInformation> classInformation;
 
     private Builder() {
     }
@@ -124,7 +124,7 @@ public class Competition {
       return this;
     }
 
-    public Builder withClassInformation(List<Class> classInformation) {
+    public Builder withClassInformation(List<ClassInformation> classInformation) {
       this.classInformation = classInformation;
       return this;
     }

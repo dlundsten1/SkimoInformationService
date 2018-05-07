@@ -2,7 +2,6 @@ package se.lundsten.model.rest;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import se.lundsten.model.Gender;
-
 import javax.validation.constraints.NotNull;
 
 @JsonDeserialize(builder = CreateIndividualRequest.Builder.class)

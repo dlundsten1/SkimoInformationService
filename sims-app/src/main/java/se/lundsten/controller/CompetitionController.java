@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import se.lundsten.Repository.CompetitionRepository;
+import se.lundsten.model.ClassInformation;
 import se.lundsten.model.Competition;
 import se.lundsten.model.rest.CompetitionRestPath;
 import se.lundsten.model.rest.CreateClassRequest;
@@ -54,10 +55,27 @@ public class CompetitionController {
             .withOrganizer(request.getOrganizer())
             .build())).getId();
   }
+  public List<ClassInformation> getAllClasses(){
+
+
+      return null;
+  }
   @RequestMapping(method = RequestMethod.POST, value = CompetitionRestPath.FIND_BY_ID)
   public String addClass (@RequestBody CreateClassRequest request, @NotNull @PathVariable("competition-id") String id){
+      List<ClassInformation> classList = null;
+      ClassInformation classInformation = ClassInformation.newBuilder()
+              .withClassId(UUID.randomUUID().toString())
+              .withClassName(request.getClassName())
+              .withDistance(request.getDistance())
+              .withVerticals(request.getVerticals())
+              .build();
 
-  return null;
+      classList.add(classInformation);
+
+    competitionRepository.save((Competition.newBuilder()
+    .withId(id).withClassInformation(classList)).build());
+
+      return  null;
   }
 
 }
