@@ -55,10 +55,11 @@ public class CompetitionController {
             .withOrganizer(request.getOrganizer())
             .build())).getId();
   }
-  public List<ClassInformation> getAllClasses(){
 
-
-      return null;
+    @RequestMapping(value = CompetitionRestPath.COMPETITION_ID+"/class", method = RequestMethod.GET)
+  public List<ClassInformation> getClasses(@NotNull @PathVariable("competition-id") String id){
+Competition c = competitionRepository.findById(id).get();
+    return c.getClassInformation();
   }
 
   @RequestMapping(value = CompetitionRestPath.COMPETITION_ID+"/class", method = RequestMethod.POST)
