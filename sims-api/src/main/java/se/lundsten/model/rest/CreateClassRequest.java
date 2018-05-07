@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import javax.validation.constraints.NotNull;
 
-@JsonDeserialize(builder = CreateIndividualRequest.Builder.class)
+@JsonDeserialize(builder = CreateClassRequest.Builder.class)
 public class CreateClassRequest {
     @NotNull
     private final String className;

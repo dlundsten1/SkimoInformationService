@@ -34,7 +34,7 @@ public class CompetitionController {
         .build())).getId();
   }
 
-  @RequestMapping(method = RequestMethod.GET, value = CompetitionRestPath.FIND_BY_ID)
+  @RequestMapping(method = RequestMethod.GET, value = CompetitionRestPath.COMPETITION_ID)
   @ApiOperation(value ="One competition", notes = "Tjänst för att hämta en tävling.")
   public Optional<Competition> getCompetitionById(@NotNull @PathVariable("competition-id") String id) {
         return competitionRepository.findById(id);
@@ -46,7 +46,7 @@ public class CompetitionController {
       return competitionRepository.findAll();
   }
 
-  @RequestMapping(method = RequestMethod.PUT, value = CompetitionRestPath.FIND_BY_ID)
+  @RequestMapping(method = RequestMethod.PUT, value = CompetitionRestPath.COMPETITION_ID)
     public String updateCompetition (@RequestBody CreateCompetitionRequest request, @NotNull @PathVariable("competition-id") String id){
     return  competitionRepository.save((Competition.newBuilder()
             .withId(id)
@@ -60,22 +60,23 @@ public class CompetitionController {
 
       return null;
   }
-  @RequestMapping(method = RequestMethod.POST, value = CompetitionRestPath.FIND_BY_ID)
-  public String addClass (@RequestBody CreateClassRequest request, @NotNull @PathVariable("competition-id") String id){
-      List<ClassInformation> classList = null;
-      ClassInformation classInformation = ClassInformation.newBuilder()
-              .withClassId(UUID.randomUUID().toString())
-              .withClassName(request.getClassName())
-              .withDistance(request.getDistance())
-              .withVerticals(request.getVerticals())
-              .build();
 
-      classList.add(classInformation);
+  @RequestMapping(value = CompetitionRestPath.COMPETITION_ID+"/class", method = RequestMethod.POST)
+  public String addClass (@RequestBody List<CreateClassRequest> request, @NotNull @PathVariable("competition-id") String id){
+    List<ClassInformation> classList = null;
 
-    competitionRepository.save((Competition.newBuilder()
-    .withId(id).withClassInformation(classList)).build());
+    for(int i=0; i<request.size(); i++){
+          CreateClassRequest c = request.get(i);
+          classList.add(ClassInformation.newBuilder()
+                  .withClassId(UUID.randomUUID().toString())
+                  .withClassName(c.getClassName())
+                  .withDistance(c.getDistance())
+                  .withVerticals(c.getVerticals()).build());
+    }
+    Competition competition = competitionRepository.findById(id).get();
+    competition.setClassInformation(classList);
 
-      return  null;
+      return  id;
   }
 
 }
