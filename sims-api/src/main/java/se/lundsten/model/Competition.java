@@ -1,9 +1,9 @@
 package se.lundsten.model;
 
+import org.springframework.data.annotation.Id;
+
 import java.time.LocalDate;
 import java.util.List;
-
-import org.springframework.data.annotation.Id;
 
 public class Competition {
   @Id
