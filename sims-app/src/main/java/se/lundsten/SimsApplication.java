@@ -7,12 +7,13 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 @SpringBootApplication
 public class SimsApplication extends SpringBootServletInitializer {
-  public static void main(String[] args) {
-    SpringApplication.run(SimsApplication.class, args);
-  }
 
   @Override
-  protected SpringApplicationBuilder configure(SpringApplicationBuilder applicationBuilder) {
-    return applicationBuilder.sources(SimsApplication.class);
+  protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+    return application.sources(SimsApplication.class);
+  }
+
+  public static void main(String[] args) {
+    SpringApplication.run(SimsApplication.class, args);
   }
 }
