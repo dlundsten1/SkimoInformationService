@@ -2,13 +2,17 @@ package se.lundsten;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import se.lundsten.controller.ResultController;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-
-public class SimsApplication {
-
+public class SimsApplication extends SpringBootServletInitializer {
   public static void main(String[] args) {
     SpringApplication.run(SimsApplication.class, args);
+  }
+
+  @Override
+  protected SpringApplicationBuilder configure(SpringApplicationBuilder applicationBuilder) {
+    return applicationBuilder.sources(SimsApplication.class);
   }
 }
