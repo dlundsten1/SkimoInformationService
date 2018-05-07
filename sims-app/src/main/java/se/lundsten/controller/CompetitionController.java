@@ -67,11 +67,17 @@ public class CompetitionController {
 
     for(int i=0; i<request.size(); i++){
           CreateClassRequest c = request.get(i);
-          classList.add(ClassInformation.newBuilder()
-                  .withClassId(UUID.randomUUID().toString())
-                  .withClassName(c.getClassName())
-                  .withDistance(c.getDistance())
-                  .withVerticals(c.getVerticals()).build());
+          ClassInformation classInformation = new ClassInformation();
+          classInformation.setVerticals(c.getVerticals());
+          classInformation.setDistance(c.getDistance());
+          classInformation.setClassName(c.getClassName());
+          classInformation.setClassId(UUID.randomUUID().toString());
+          classList.add(classInformation);
+         // classList.add(ClassInformation.newBuilder()
+         //         .withClassId(UUID.randomUUID().toString())
+           //       .withClassName(c.getClassName())
+           //       .withDistance(c.getDistance())
+            //      .withVerticals(c.getVerticals()).build());
     }
     Competition competition = competitionRepository.findById(id).get();
     competition.setClassInformation(classList);

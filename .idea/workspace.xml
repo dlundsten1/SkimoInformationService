@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4be7aa04-b98f-4b7a-a57a-51dd90df01be" name="Default" comment="addClass färdig">
+    <list default="true" id="4be7aa04-b98f-4b7a-a57a-51dd90df01be" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/rest/CompetitionRestPath.java" afterPath="$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/rest/CompetitionRestPath.java" />
-      <change beforePath="$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/rest/CreateClassRequest.java" afterPath="$PROJECT_DIR$/sims-api/src/main/java/se/lundsten/model/rest/CreateClassRequest.java" />
       <change beforePath="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/controller/CompetitionController.java" afterPath="$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/controller/CompetitionController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -150,8 +148,8 @@
           <file leaf-file-name="CompetitionController.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/controller/CompetitionController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+                <state relative-caret-position="251">
+                  <caret line="73" column="53" lean-forward="true" selection-start-line="73" selection-start-column="53" selection-end-line="73" selection-end-column="53" />
                   <folding>
                     <element signature="e#1741#1742#0" expanded="true" />
                     <element signature="e#1791#1792#0" expanded="true" />
@@ -849,7 +847,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525686833736</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="addClass. Strular">
+      <created>1525725279153</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1525725279153</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -910,7 +915,8 @@
     <MESSAGE value="Lagt in HTTP-PUT&amp;GET metoder i IndividualsController" />
     <MESSAGE value="addClass i CompetitionController &amp; CreateClassRequest" />
     <MESSAGE value="CreateClassRequest &amp; börjat med ClassMetoderna i competitonController. Långt från färdigt." />
-    <option name="LAST_COMMIT_MESSAGE" value="CreateClassRequest &amp; börjat med ClassMetoderna i competitonController. Långt från färdigt." />
+    <MESSAGE value="addClass. Strular" />
+    <option name="LAST_COMMIT_MESSAGE" value="addClass. Strular" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1331,8 +1337,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sims-app/src/main/java/se/lundsten/controller/CompetitionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state relative-caret-position="251">
+          <caret line="73" column="53" lean-forward="true" selection-start-line="73" selection-start-column="53" selection-end-line="73" selection-end-column="53" />
           <folding>
             <element signature="e#1741#1742#0" expanded="true" />
             <element signature="e#1791#1792#0" expanded="true" />
