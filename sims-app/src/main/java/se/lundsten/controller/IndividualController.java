@@ -1,5 +1,6 @@
 package se.lundsten.controller;
 
+import io.micrometer.core.annotation.Timed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import se.lundsten.Repository.IndividualsRepository;
@@ -13,6 +14,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping(value = IndividualRestPath.INDIVIDUAL_PATH)
+@Timed
 public class IndividualController implements IndividualRestPath {
 
   @Autowired
