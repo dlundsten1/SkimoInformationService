@@ -1,5 +1,6 @@
 package se.lundsten.controller;
 
+import io.micrometer.core.annotation.Timed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,6 +11,7 @@ import se.lundsten.model.rest.CreateIndividualRequest;
 import java.util.List;
 
 @RestController
+@Timed
 public class RankController {
   @Autowired
   IndividualsRepository individualsRepository;
