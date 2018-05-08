@@ -12,9 +12,11 @@ import se.lundsten.model.rest.CreateCompetitionRequest;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Stream;
 
 @RestController
 @RequestMapping(value = CompetitionRestPath.COMPETITION_PATH)
@@ -42,13 +44,14 @@ public class CompetitionController {
 
   @RequestMapping(method = RequestMethod.GET)
   @ApiOperation(value ="All competitions", notes = "Tjänst för att hämta alla tävlingar.")
-  public List<Competition> getAllCompetitions() {
-      return competitionRepository.findAll();
+    public List<Competition> getAllCompetitions() {
+    return competitionRepository.findAll();
   }
 
   @RequestMapping(method = RequestMethod.PUT, value = CompetitionRestPath.COMPETITION_ID)
+  @ApiOperation(value ="Update competition", notes = "Tjänst för att uppdatera en tävling.")
     public String updateCompetition (@RequestBody CreateCompetitionRequest request, @NotNull @PathVariable("competition-id") String id){
-    return  competitionRepository.save((Competition.newBuilder()
+    return competitionRepository.save((Competition.newBuilder()
             .withId(id)
             .withDate(request.getDate())
             .withName(request.getName())
@@ -56,34 +59,31 @@ public class CompetitionController {
             .build())).getId();
   }
 
-    @RequestMapping(value = CompetitionRestPath.COMPETITION_ID+"/class", method = RequestMethod.GET)
-  public List<ClassInformation> getClasses(@NotNull @PathVariable("competition-id") String id){
-Competition c = competitionRepository.findById(id).get();
-    return c.getClassInformation();
+  @RequestMapping(method = RequestMethod.GET, value = CompetitionRestPath.COMPETITION_ID+"/class")
+  @ApiOperation(value ="Get classes", notes = "Tjänst för att hämta alla klasser för en specifik tävling.")
+    public List<ClassInformation> getClasses(@NotNull @PathVariable("competition-id") String id){
+    Optional<Competition> c = competitionRepository.findById(id);
+    return c.get().getClassInformation();
   }
 
   @RequestMapping(value = CompetitionRestPath.COMPETITION_ID+"/class", method = RequestMethod.POST)
-  public String addClass (@RequestBody List<CreateClassRequest> request, @NotNull @PathVariable("competition-id") String id){
-    List<ClassInformation> classList = null;
+  @ApiOperation(value ="Add classes", notes = "Tjänst för att lägga till klasser för en tävling")
+    public String addClasses (@RequestBody List<CreateClassRequest> request, @NotNull @PathVariable("competition-id") String id){
+    Competition competition = competitionRepository.findById(id).get();
+    List<ClassInformation> classList = competition.getClassInformation();
 
     for(int i=0; i<request.size(); i++){
           CreateClassRequest c = request.get(i);
-          ClassInformation classInformation = new ClassInformation();
-          classInformation.setVerticals(c.getVerticals());
-          classInformation.setDistance(c.getDistance());
-          classInformation.setClassName(c.getClassName());
-          classInformation.setClassId(UUID.randomUUID().toString());
-          classList.add(classInformation);
-         // classList.add(ClassInformation.newBuilder()
-         //         .withClassId(UUID.randomUUID().toString())
-           //       .withClassName(c.getClassName())
-           //       .withDistance(c.getDistance())
-            //      .withVerticals(c.getVerticals()).build());
+          classList.add(ClassInformation.newBuilder()
+                  .withClassId(UUID.randomUUID().toString())
+                  .withClassName(c.getClassName())
+                  .withDistance(c.getDistance())
+                  .withVerticals(c.getVerticals()).build());
     }
-    Competition competition = competitionRepository.findById(id).get();
     competition.setClassInformation(classList);
-
-      return  id;
+    competitionRepository.save(competition);
+    return  id;
   }
+
 
 }
