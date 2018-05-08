@@ -1,13 +1,22 @@
 package se.lundsten.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "individual")
 public class Individual {
-  private final String id;
-  private final String firstName;
-  private final String lastName;
-  private final Integer birthYear;
-  private final int points;
-  private final IndividualRank rank;
-  private final Gender gender;
+  @Id
+  private String id;
+  private String firstName;
+  private String lastName;
+  private Integer birthYear;
+  private int points;
+  private IndividualRank rank;
+  private Gender gender;
+
+  public Individual (){
+
+  }
 
   private Individual(Builder builder) {
     id = builder.id;
