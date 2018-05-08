@@ -1,6 +1,7 @@
 package se.lundsten.controller;
 
 import io.swagger.annotations.ApiOperation;
+import io.micrometer.core.annotation.Timed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,6 +21,7 @@ import javax.validation.constraints.NotNull;
 
 @RestController
 @RequestMapping(value = IndividualRestPath.INDIVIDUAL_PATH)
+@Timed
 public class IndividualController implements IndividualRestPath {
 
   @Autowired

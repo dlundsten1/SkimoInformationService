@@ -9,6 +9,9 @@ import se.lundsten.model.IndividualResult;
 
 import java.util.List;
 
+import io.micrometer.core.annotation.Timed;
+
+@Timed
 public class ResultController {
     @RequestMapping(method = RequestMethod.GET, value = "{competition-id}/{class-id}")
     public List<IndividualResult> individualResultList(
