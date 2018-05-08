@@ -2,17 +2,21 @@ package se.lundsten.controller;
 
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 import se.lundsten.Repository.IndividualsRepository;
 import se.lundsten.model.Individual;
 import se.lundsten.model.rest.CreateIndividualRequest;
 import se.lundsten.model.rest.IndividualRestPath;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 @RestController
 @RequestMapping(value = IndividualRestPath.INDIVIDUAL_PATH)
