@@ -15,13 +15,9 @@ import se.lundsten.model.rest.CompetitionRestPath;
 import se.lundsten.model.rest.CreateClassRequest;
 import se.lundsten.model.rest.CreateCompetitionRequest;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.ArrayList;
-
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
-
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
